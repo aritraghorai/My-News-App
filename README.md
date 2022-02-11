@@ -1,4 +1,4 @@
-# Building My News App Using React Functional Compoent
+# Building My News App Using News Api
 
 ## Images
 
@@ -15,7 +15,7 @@
 - creat a folder .env.local on project directory
 - Then go to https://newsapi.org/
 - Creat A account a get your api key
-- And creat a variable call **REACT_APP_NEWS_API**
+- And creat a variable call **REACT_APP_NEWS_API** on .env.local file
   - like REACT_APP_NEWS_API="your api key"
 - Then start your devolopement server by **yarn start**
 - And End Happy Coding 😃😃😃😃
