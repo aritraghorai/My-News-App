@@ -9,6 +9,7 @@ export default class News extends Component {
     country: PropTypes.string,
     catagory: PropTypes.string,
     mode: PropTypes.string,
+    apiKey: PropTypes.string,
   };
   capitalizeFristLetter = (s) => {
     return s.charAt(0).toUpperCase() + s.slice(1);
@@ -30,7 +31,7 @@ export default class News extends Component {
   ) => {
     this.props.setProgress(10);
     // this.setState({ loading: true });
-    let url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=3b1ce773401c41c7bdafc2a8a98006a6&pageSize=${this.props.pageSize}&category=${catagory}&page=${page}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${this.props.apiKey}&pageSize=${this.props.pageSize}&category=${catagory}&page=${page}`;
 
     let data = await fetch(url);
     this.props.setProgress(40);

@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
 export default class App extends Component {
+  apiKey = process.env.REACT_APP_NEWS_API;
   constructor() {
     super();
     this.state = {
@@ -40,6 +41,7 @@ export default class App extends Component {
             path="/"
             element={
               <News
+                apiKey={this.apiKey}
                 setProgress={this.setProgress}
                 pageSize={12}
                 mode={this.state.mode}
@@ -54,6 +56,7 @@ export default class App extends Component {
             path="/business"
             element={
               <News
+                apiKey={this.apiKey}
                 setProgress={this.setProgress}
                 pageSize={12}
                 mode={this.state.mode}
@@ -68,6 +71,7 @@ export default class App extends Component {
             path="/entertainment"
             element={
               <News
+                apiKey={this.apiKey}
                 setProgress={this.setProgress}
                 pageSize={12}
                 key={"entertainment"}
@@ -82,6 +86,7 @@ export default class App extends Component {
             path="/science"
             element={
               <News
+                apiKey={this.apiKey}
                 setProgress={this.setProgress}
                 pageSize={12}
                 mode={this.state.mode}
@@ -96,6 +101,7 @@ export default class App extends Component {
             path="/sports"
             element={
               <News
+                apiKey={this.apiKey}
                 setProgress={this.setProgress}
                 pageSize={12}
                 mode={this.state.mode}
@@ -110,6 +116,7 @@ export default class App extends Component {
             path="/technology"
             element={
               <News
+                apiKey={this.apiKey}
                 setProgress={this.setProgress}
                 pageSize={12}
                 mode={this.state.mode}
@@ -124,6 +131,7 @@ export default class App extends Component {
             path="/health"
             element={
               <News
+                apiKey={this.apiKey}
                 setProgress={this.setProgress}
                 pageSize={12}
                 mode={this.state.mode}
